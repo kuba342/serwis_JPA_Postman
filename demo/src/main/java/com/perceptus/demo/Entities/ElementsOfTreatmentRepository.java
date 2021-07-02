@@ -1,0 +1,9 @@
+package com.perceptus.demo.Entities;
+
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ElementsOfTreatmentRepository extends CrudRepository<ElementsOfTreatment, Long> {
+    //List<ElementsOfTreatment> findByRodzaj(TreatType rodzaj);
+    ElementsOfTreatment findById(Long kod);
+}
