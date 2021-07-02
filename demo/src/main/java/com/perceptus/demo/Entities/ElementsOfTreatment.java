@@ -38,23 +38,23 @@ public class ElementsOfTreatment{
     }
 
     //Settery i gettery
-    public getKod(){
+    public Long getKod(){
         return this.kod;
     }
 
-    public getRodzaj(){
+    public TreatType getRodzaj(){
         return this.rodzaj;
     }
 
-    public getOpis(){
+    public String getOpis(){
         return this.opis;
     }
 
-    public setRodzaj(TreatType type){
+    public void setRodzaj(TreatType type){
         this.rodzaj = type;
     }
 
-    public setOpis(String str){
+    public void setOpis(String str){
         this.opis = str;
     }
 }
