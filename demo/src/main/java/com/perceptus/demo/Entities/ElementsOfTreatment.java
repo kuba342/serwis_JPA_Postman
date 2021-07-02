@@ -1,26 +1,26 @@
 package com.perceptus.demo.Entities;
 
-import javax.annotation.processing.Generated;
+//import javax.annotation.processing.Generated;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerattionType;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Entity;
 
-public enum TreatType{
+enum TreatType{
     ICD9("ICD9"),
     ICD10("ICD10");
 
     String rodzaj;
 
-    private rodzaj(String str){
+    private TreatType(String str){
         this.rodzaj = str;
     }
 }
 
 @Entity
-public class ElementsOfTreatment{
-
+public class ElementsOfTreatment {
     @Id
-    @GeneratedValue(strategy = GenerattionType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long kod;
     private TreatType rodzaj;
     private String opis;
@@ -34,7 +34,7 @@ public class ElementsOfTreatment{
 
     @Override
     public String toString(){
-        return String.format("Element leczenia [id = %d, rodzaj = %s, opis = %s]", this.id, rodzaj.toString(), this.opis);
+        return String.format("Element leczenia [id = %d, rodzaj = %s, opis = %s]", this.kod, rodzaj.toString(), this.opis);
     }
 
     //Settery i gettery

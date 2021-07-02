@@ -1,10 +1,15 @@
 package com.perceptus.demo.Entities;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Entity;
+
 @Entity
 public class Address {
 
     @Id
-    @GeneratedValue(strategy = GenerattionType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long AdresId;
     private String kodPocztowy;
     private String miasto;
@@ -30,7 +35,7 @@ public class Address {
     }
 
     //Settery i gettery
-    
+
 
 
 }
