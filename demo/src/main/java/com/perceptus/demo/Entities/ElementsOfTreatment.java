@@ -21,7 +21,7 @@ enum TreatType{
 public class ElementsOfTreatment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long kod;
+    private long kod;
     private TreatType rodzaj;
     private String opis;
 
